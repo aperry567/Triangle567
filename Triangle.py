@@ -25,7 +25,7 @@ class Classify_Triangle:
         if not(isinstance(self.a,int) and isinstance(self.b,int) and isinstance(self.c,int)):
             return 'InvalidInput'
             
-        if (self.a + self.b) < (self.c) or (self.a + self.b) < (self.b) or (self.b + self.c) < (self.a):
+        if (self.a + self.b) =< (self.c) or (self.a + self.b) < (self.b) or (self.b + self.c) < (self.a):
             return 'NotATriangle'
             
         if (self.a == self.b and self.b == self.c):
