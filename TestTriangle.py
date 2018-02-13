@@ -16,17 +16,30 @@ class Classify_TriangleTest(unittest.TestCase):
     def test_suite_init(self):
         """ Test Suite for Triangle init method"""
         f1 = Classify_Triangle(3,7,9)
-        self.assertEqual(f1.a, 3)
-        self.assertTrue(f1.b, 4)
-        self.assertTrue(f1.c, 2)
+        self.assertTrue(f1.a == 3)
+        self.assertTrue(f1.b == 7)
+        self.assertTrue(f1.c == 9)
         
     def test_suite_classifyTriangle(self):
         """ Test Suite for Triangle classifyTriangle method"""
-        """ Equilateral Triangle"""
         f1 = Classify_Triangle(6,8,10)
-        f2 = Classify_Triangle(2,4,5)
-        f3 = Classify_Triangle(1,3,7)
+        self.assertTrue(f1.classifyTriangle() != 'Right')
+        self.assertTrue(f1.classifyTriangle() != 'Equilateral')   
+        self.assertFalse(f1.classifyTriangle() == 'Equilateral')  
         
+        f2 = Classify_Triangle(0,-1,-2)
+        self.assertTrue(f2.classifyTriangle() != 'InvalidInput')
+        self.assertTrue(f2.classifyTriangle() == 'ValidInput')       
+        
+        f3 = Classify_Triangle(1,3,7)
+        self.assertTrue(f3.classifyTriangle() != 'Isoceles')
+        self.assertTrue(f3.classifyTriangle() != 'InvalidInput') 
+        
+        f4 = Classify_Triangle(3,4,5)
+        self.assertTrue(f4.classifyTriangle() != 'Scalene')
+        self.assertTrue(f4.classifyTriangle() != 'InvalidInput') 
+                  
+'''       
         #self.assertFalse(f1==f2==f3)
         self.assertFalse(Classify_Triangle(6,4,1) == Classify_Triangle(10,9,8))
         
@@ -38,7 +51,7 @@ class Classify_TriangleTest(unittest.TestCase):
         """ Scalene Triangle"""
         self.assertTrue(f1 != f2) and (f2 !=f3) and (f1 !=f2)
         #self.assertEqual(f1 != f2) and (f2 !=f3) and (f1 !=f2)       
-         
+'''        
 #########################################################################################################################   
 def main():
     '''main() function'''      
