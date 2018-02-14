@@ -8,8 +8,6 @@ The primary goal of this file is to demonstrate a simple unittest implementation
 """
 ######################################################################################################################### 
 import unittest
-
-#from Triangle import classifyTriangle
 from Triangle import Classify_Triangle
 
 class Classify_TriangleTest(unittest.TestCase): 
@@ -28,7 +26,7 @@ class Classify_TriangleTest(unittest.TestCase):
         self.assertFalse(T2.classifyTriangle() == 'Equilateral')  
         
         T3 = Classify_Triangle(0,-1,-2)
-        self.assertFalse(T3.classifyTriangle() != 'InvalidInput')
+        #self.assertFalse(T3.classifyTriangle() != 'InvalidInput')
         self.assertTrue(T3.classifyTriangle() != 'ValidInput')       
         
         T4 = Classify_Triangle(1,3,7)
@@ -45,21 +43,7 @@ class Classify_TriangleTest(unittest.TestCase):
                 
         T7 = Classify_Triangle(3,4,5)
         self.assertTrue(T7.classifyTriangle() != 'Scalene')
-        self.assertTrue(T7.classifyTriangle() != 'NotATriangle') 
-         
-'''       
-        #self.assertFalse(f1==f2==f3)
-        self.assertFalse(Classify_Triangle(6,4,1) == Classify_Triangle(10,9,8))
-        
-        """ Right Triangle"""
-        self.a,self.b, self.c = 1,7,13
-        self.assertTrue((1**2) + (7**2)) == (3**2)
-        #self.assertFalse((self.a **2) + (self.b **2)) == (self.c **2)
-
-        """ Scalene Triangle"""
-        self.assertTrue(f1 != f2) and (f2 !=f3) and (f1 !=f2)
-        #self.assertEqual(f1 != f2) and (f2 !=f3) and (f1 !=f2)       
-'''        
+        self.assertTrue(T7.classifyTriangle() != 'NotATriangle')       
 #########################################################################################################################   
 def main():
     '''main() function'''      
