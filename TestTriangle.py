@@ -26,20 +26,20 @@ class Classify_TriangleTest(unittest.TestCase):
         self.assertFalse(T2.classifyTriangle() == 'Equilateral')  
         
         T3 = Classify_Triangle(0,-1,-2)
-        #self.assertFalse(T3.classifyTriangle() != 'InvalidInput')
-        self.assertTrue(T3.classifyTriangle() != 'ValidInput')       
+        self.assertTrue(T3.classifyTriangle() != 'InvalidInput')
+        self.assertTrue(T3.classifyTriangle() == 'ValidInput')
         
         T4 = Classify_Triangle(1,3,7)
         self.assertTrue(T4.classifyTriangle() != 'Isoceles')
-        self.assertTrue(T4.classifyTriangle() == 'InvalidInput') 
+        self.assertTrue(T4.classifyTriangle() != 'InvalidInput')
         
         T5 = Classify_Triangle(2,2,2)
         self.assertTrue(T5.classifyTriangle() != 'Isoceles')
-        self.assertTrue(T5.classifyTriangle() == 'InvalidInput') 
+        self.assertTrue(T5.classifyTriangle() == 'ValidInput')
         
         T6 = Classify_Triangle(3,4,5)
         self.assertTrue(T6.classifyTriangle() != 'Scalene')
-        self.assertTrue(T6.classifyTriangle() == 'InvalidInput') 
+        self.assertTrue(T6.classifyTriangle() == 'ValidInput')
                 
         T7 = Classify_Triangle(3,4,5)
         self.assertTrue(T7.classifyTriangle() != 'Scalene')
