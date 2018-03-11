@@ -1,7 +1,32 @@
 language: python
 python:
  - "2.7"
+ 
+ matrix:
+  include:
+    - python: 2.7
+      dist: trusty
+      sudo: required
+      virtualenv:
+        system_site_packages: true
+      addons:
+        apt:
+          packages:
+            - python-requests
+            - python-coverage
+            - python-mock
+ 
+ 
+install: 
+ - pip install --user codecov && codecov -t token=8b3a1010-a77c-4d9d-a230-1ab3dba943c4
+ - pip install codecov
+ - python setup.py install
 
 # command to run tests
 script:
- - python -m unittest TestTriangle
+ - coverage run TestTriangle.python
+ - py.test TestTriangle.py --cov=codecov
+ 
+ after_success:
+ - codecov
+ - codecov --token=8b3a1010-a77c-4d9d-a230-1ab3dba943c4
