@@ -5,6 +5,6 @@
 
 
 
-[![Quality Gate](http://sonarcloud.io/dashboard/index/gregswindle-cordova-contacts-swagger-api](http://sonarcloud.io/dashboard/index/gregswindle-cordova-contacts-swagger-api)
+[![Quality Gate](http://sonarcloud.io/dashboard/index/gregswindle-cordova-contacts-swagger-api)](http://sonarcloud.io/dashboard/index/gregswindle-cordova-contacts-swagger-api)
 
 
