@@ -9,7 +9,12 @@ exclude_lines =
     if .debug:
     raise NotImplementedError
     if __name__ == .__main__.:
+    
 ignore_errors = True
+
+[html]
+directory = coverage_html_report
+
 omit =
     venv/*
     tests/*
