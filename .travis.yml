@@ -7,8 +7,8 @@ sudo: required
 
 addons:
  sonarcloud:
- organization: "teamX-ssw567-triangle567"
- token: your-token-goes-here
+ organization: "teamayana-ssw567-triangle567"
+ token: 711aeecef0c3502632a69a1ac5d93cd7ce700594
  branches:
  - sonarcloud
  
